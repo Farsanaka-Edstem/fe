@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: rgb(90, 84, 84);
+}
+.main-div {
+  display: grid;
+  grid-template-columns: 10rem auto;
+  grid-template-rows: auto 1fr;
+  grid-gap: 20px;
+  background-color: white;
+
+  border-top: 1px solid rgb(190, 187, 187);
+  border-left: 1px solid rgb(190, 187, 187);
+}
+.main-div > div {
+  border-bottom: 1px solid rgb(190, 187, 187);
+  border-right: 1px solid rgb(190, 187, 187);
+}
+/* nav-bar */
+/* .navbar {
+  display: flex;
+  justify-content: ;
+  
+} */
+.name-content {
+  display: flex;
+  gap: 5px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-hamburger {
+  width: 20px;
+  color: black;
+}
+.nav-bell-icon {
+  margin-right: 10px;
+  color: rgb(68, 68, 68);
+  width: 20px;
+  height: 20px;
+  padding: 0 2px 0 2px;
+  border: 1px solid rgb(134, 133, 133);
+}
+.propic-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 10px;
+  color: rgb(27, 27, 27);
+}
+.name p {
+  margin-top: 4px;
+  color: grey;
+}
+.darrow-icon {
+  stroke: rgb(82, 80, 80);
+
+  width: 10px;
+  height: 10px;
+  margin: 0 20px 0 10px;
+}
+/* Sidebar-Menu */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  color: rgb(24, 24, 24);
+}
+.menu {
+  color: grey;
+  font-size: 9px;
+}
+.menu-icon {
+  color: grey;
+}
+
+/* Assessment  */
+.assessment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.assessment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.assessment-head {
+  display: flex;
+  justify-content: space-between;
+}
+.newassessment-button {
+  display: flex;
+  background-color: #253aad;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+  padding-left: 4px;
+}
+.newassessment-button button {
+  background-color: #253aad;
+  border: 0;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.assessment-item {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  font-size: 60%;
+}
+.search {
+  border-bottom: 1px solid black;
+}
+.open-close {
+  margin: 10px;
+}
+.per {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 10px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #253aad;
+  border-radius: 50%;
+}
+.per-inv {
+  display: flex;
+  gap: 20px;
+}
+
+.assessment-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(156, 155, 155);
+  border-radius: 2px;
+}
+.grid-content {
+  padding: 15px;
+  border-bottom: 1px solid rgb(156, 155, 155);
+}
+.grid-link {
+  display: flex;
+
+  align-items: center;
+  padding: 4px 15px;
+  display: flex;
+}
+
+.multiple-code {
+  display: flex;
+  gap: 20px;
+}
+.open {
+  background-color: #253aad;
+  color: white;
+  padding: 3px;
+}
+.multiple-code table,
+.framework table {
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 4px;
+}
+/* toggle */
+/* Container for the toggle */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.close {
+  margin-left: -3px;
+  padding: 3px;
+}
+
+/* The track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+
+/* The circular slider */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Toggled state */
+.toggle-switch input:checked + .slider {
+  background-color: #4caf50;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
